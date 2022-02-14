@@ -1,0 +1,17 @@
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3 EWARM FS 8.40.3\arm\bin\armproc.dll" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3 EWARM FS 8.40.3\arm\bin\armJET.dll" 
+
+"D:\Baueflde_Desktop\NXP_BlinkySDK\Debug\Exe\BlinkySDK.out" 
+
+--plugin="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3 EWARM FS 8.40.3\arm\bin\armbat.dll" 
+
+--device_macro="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3 EWARM FS 8.40.3\arm\config\debugger\NXP\iMXRT.dmac" 
+
+--device_macro="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3 EWARM FS 8.40.3\arm\config\debugger\NXP\iMXRT_Trace.dmac" 
+
+--flash_loader="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3 EWARM FS 8.40.3\arm\config\flashloader\NXP\FlashIMXRT1060_EVK_FlexSPI.board" 
+
+
+
+

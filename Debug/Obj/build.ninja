@@ -1,0 +1,35 @@
+#Generating source browse information for project BlinkySDK
+
+
+#Abbreviations
+cc = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3$ EWARM$ FS$ 8.40.3\common\bin\SourceIndexer.exe
+ll = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3$ EWARM$ FS$ 8.40.3\common\bin\PbdLink.exe
+bd = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3$ EWARM$ FS$ 8.40.3\common\bin\makeBrowseData.exe
+
+
+
+#Rules
+rule index
+  depfile = $out.dep
+  command = $cc -out=$out -f $in
+rule link
+  command = $ll -M $out $in
+rule browsedata
+  command = $bd $in -output  $out
+
+
+
+#Build steps
+build fsl_clock.pbi : index fsl_clock.xcl
+build fsl_common.pbi : index fsl_common.xcl
+build fsl_common_arm.pbi : index fsl_common_arm.xcl
+build fsl_gpio.pbi : index fsl_gpio.xcl
+build system_MIMXRT1062.pbi : index system_MIMXRT1062.xcl
+build main.pbi : index main.xcl
+build BlinkySDK_part0.pbi : link fsl_clock.pbi fsl_common.pbi
+build BlinkySDK_part1.pbi : link fsl_common_arm.pbi fsl_gpio.pbi
+build BlinkySDK_part2.pbi : link system_MIMXRT1062.pbi main.pbi
+build BlinkySDK.pbd : link BlinkySDK_part0.pbi BlinkySDK_part1.pbi BlinkySDK_part2.pbi
+build BlinkySDK.pbw : browsedata BlinkySDK.pbd
+
+

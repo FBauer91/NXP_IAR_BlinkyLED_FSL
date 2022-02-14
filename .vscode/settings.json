@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "fsl_gpio.h": "c",
+    "fsl_device_registers.h": "c"
+  }
+}

@@ -1,0 +1,219 @@
+###############################################################################
+#
+# IAR ELF Linker V8.40.3.268/W32 for ARM                  11/Feb/2022  14:44:11
+# Copyright 2007-2020 IAR Systems AB.
+#
+#    Output file  =  D:\Baueflde_Desktop\NXP_BlinkySDK\Debug\Exe\BlinkySDK.out
+#    Map file     =  D:\Baueflde_Desktop\NXP_BlinkySDK\Debug\List\BlinkySDK.map
+#    Command line =
+#        -f C:\Users\Baueflde\AppData\Local\Temp\EW4B6.tmp
+#        (D:\Baueflde_Desktop\NXP_BlinkySDK\Debug\Obj\fsl_clock.o
+#        D:\Baueflde_Desktop\NXP_BlinkySDK\Debug\Obj\fsl_common.o
+#        D:\Baueflde_Desktop\NXP_BlinkySDK\Debug\Obj\fsl_common_arm.o
+#        D:\Baueflde_Desktop\NXP_BlinkySDK\Debug\Obj\fsl_gpio.o
+#        D:\Baueflde_Desktop\NXP_BlinkySDK\Debug\Obj\main.o
+#        D:\Baueflde_Desktop\NXP_BlinkySDK\Debug\Obj\system_MIMXRT1062.o
+#        --no_out_extension -o
+#        D:\Baueflde_Desktop\NXP_BlinkySDK\Debug\Exe\BlinkySDK.out --redirect
+#        _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb --map
+#        D:\Baueflde_Desktop\NXP_BlinkySDK\Debug\List\BlinkySDK.map --config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3 EWARM FS
+#        8.40.3\arm\config\linker\NXP\MIMXRT1062xxx6A.icf" --semihosting
+#        --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__Heap_Handler  = DLMalloc
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The advanced heap was selected because the application calls memory
+allocation functions outside of system library functions, and there
+are calls to deallocation functions in the application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x1'ffff] { ro };
+define block CSTACK with size = 8K, alignment = 8 { };
+define block PROC_STACK with size = 0, alignment = 8 { };
+define block HEAP with size = 32K, alignment = 8 { };
+"P3":  place in [from 0x2000'0000 to 0x2001'ffff] |
+                [from 0x2020'0000 to 0x2023'ffff] {
+          rw, block CSTACK, block PROC_STACK, block HEAP };
+
+No sections matched the following patterns:
+
+  ro section application_specific_ro  in "P2"
+  rw                                  in "P3"
+  rw section application_specific_rw  in "P4"
+
+
+  Section   Kind         Address    Size  Object
+  -------   ----         -------    ----  ------
+"A0":                               0x40
+  .intvec   ro code          0x0    0x40  vector_table_M.o [4]
+                          - 0x40    0x40
+
+"P1":                              0x570
+  .text     ro code         0x40   0x22a  fsl_gpio.o [1]
+  .text     ro code        0x26a     0x2  vector_table_M.o [4]
+  .text     ro code        0x26c    0x24  ABIassert.o [5]
+  .text     ro code        0x290     0x6  abort.o [2]
+  .text     ro code        0x298    0x14  exit.o [5]
+  .text     ro code        0x2ac   0x154  main.o [1]
+  .rodata   const          0x400    0x3c  fsl_gpio.o [1]
+  .rodata   const          0x43c    0x3c  main.o [1]
+  .rodata   const          0x478    0x38  fsl_gpio.o [1]
+  .rodata   const          0x4b0    0x38  fsl_gpio.o [1]
+  .rodata   const          0x4e8    0x28  fsl_gpio.o [1]
+  .text     ro code        0x510    0x22  fpinit_M.o [3]
+  .text     ro code        0x534    0x1e  cmain.o [4]
+  .text     ro code        0x552     0x4  low_level_init.o [2]
+  .text     ro code        0x556     0x4  exit.o [2]
+  .text     ro code        0x55c     0xa  cexit.o [4]
+  .rodata   const          0x568    0x10  fsl_gpio.o [1]
+  .rodata   const          0x578    0x10  main.o [1]
+  .rodata   const          0x588     0xc  fsl_gpio.o [1]
+  .rodata   const          0x594     0xc  fsl_gpio.o [1]
+  .text     ro code        0x5a0     0xc  cstartup_M.o [4]
+  .rodata   const          0x5ac     0x4  main.o [1]
+                         - 0x5b0   0x570
+
+"P3":                             0x2000
+  CSTACK             0x2000'0000  0x2000  <Block>
+    CSTACK  uninit   0x2000'0000  0x2000  <Block tail>
+                   - 0x2000'2000  0x2000
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+        0x5b0     0x1'ffff  0x1'fa50
+  0x2000'2000  0x2001'ffff  0x1'e000
+  0x2020'0000  0x2023'ffff  0x4'0000
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+command line/config:
+    -------------------------------------------
+    Total:
+
+D:\Baueflde_Desktop\NXP_BlinkySDK\Debug\Obj: [1]
+    fsl_gpio.o            554      252
+    main.o                340       80
+    -------------------------------------------
+    Total:                894      332
+
+dl7M_tln.a: [2]
+    abort.o                 6
+    exit.o                  4
+    low_level_init.o        4
+    -------------------------------------------
+    Total:                 14
+
+m7M_tlv.a: [3]
+    fpinit_M.o             34
+    -------------------------------------------
+    Total:                 34
+
+rt7M_tl.a: [4]
+    cexit.o                10
+    cmain.o                30
+    cstartup_M.o           12
+    vector_table_M.o       66
+    -------------------------------------------
+    Total:                118
+
+shb_l.a: [5]
+    ABIassert.o            36
+    exit.o                 20
+    -------------------------------------------
+    Total:                 56
+
+    Gaps                    6        2
+    Linker created                        8'192
+-----------------------------------------------
+    Grand Total:        1'122      334    8'192
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address  Size  Type      Object
+-----                       -------  ----  ----      ------
+?main                         0x535        Code  Gb  cmain.o [4]
+CLOCK_ControlGate              0x59  0x4a  Code  Lc  fsl_gpio.o [1]
+CLOCK_ControlGate             0x2c5  0x4a  Code  Lc  main.o [1]
+CLOCK_EnableClock              0xa3  0x10  Code  Lc  fsl_gpio.o [1]
+CLOCK_EnableClock             0x30f  0x10  Code  Lc  main.o [1]
+CSTACK$$Base            0x2000'0000         --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'2000         --   Gb  - Linker created -
+GPIO_GetInstance               0xc9  0x2e  Code  Lc  fsl_gpio.o [1]
+GPIO_PinInit                   0xf7  0x74  Code  Gb  fsl_gpio.o [1]
+GPIO_PinSetInterruptConfig
+                              0x1c1  0xaa  Code  Gb  fsl_gpio.o [1]
+GPIO_PinWrite                 0x16b  0x36  Code  Gb  fsl_gpio.o [1]
+GPIO_PortToggle               0x31f   0x6  Code  Lc  main.o [1]
+GPIO_SetPinInterruptConfig
+                               0xb3  0x16  Code  Lc  fsl_gpio.o [1]
+IOMUXC_SetPinConfig           0x341  0x10  Code  Lc  main.o [1]
+IOMUXC_SetPinMux              0x325  0x1c  Code  Lc  main.o [1]
+RTWDOG_Disable                0x351   0xa  Code  Lc  main.o [1]
+RTWDOG_SetTimeoutValue        0x35b   0x8  Code  Lc  main.o [1]
+Region$$Table$$Base             0x0         --   Gb  - Linker created -
+Region$$Table$$Limit            0x0         --   Gb  - Linker created -
+_SDK_AtomicLocalClearAndSet4Byte
+                               0x41  0x18  Code  Lc  fsl_gpio.o [1]
+_SDK_AtomicLocalClearAndSet4Byte
+                              0x2ad  0x18  Code  Lc  main.o [1]
+__aeabi_assert                0x26d  0x24  Code  Gb  ABIassert.o [5]
+__cmain                       0x535        Code  Gb  cmain.o [4]
+__exit                        0x299  0x14  Code  Gb  exit.o [5]
+__iar_init_vfp                0x511        Code  Gb  fpinit_M.o [3]
+__iar_program_start           0x5a1        Code  Gb  cstartup_M.o [4]
+__low_level_init              0x553   0x4  Code  Gb  low_level_init.o [2]
+__vector_table                  0x0        Data  Gb  vector_table_M.o [4]
+_call_main                    0x541        Code  Gb  cmain.o [4]
+_exit                         0x55d        Code  Gb  cexit.o [4]
+_main                         0x54f        Code  Gb  cmain.o [4]
+abort                         0x291   0x6  Code  Gb  abort.o [2]
+exit                          0x557   0x4  Code  Gb  exit.o [2]
+main                          0x373  0x6a  Code  Gb  main.o [1]
+myDelay                       0x363  0x10  Code  Gb  main.o [1]
+s_gpioBases                   0x4e8  0x28  Data  Lc  fsl_gpio.o [1]
+s_gpioClock                   0x594   0xc  Data  Lc  fsl_gpio.o [1]
+
+
+[1] = D:\Baueflde_Desktop\NXP_BlinkySDK\Debug\Obj
+[2] = dl7M_tln.a
+[3] = m7M_tlv.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+  1'122 bytes of readonly  code memory
+    334 bytes of readonly  data memory
+  8'192 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

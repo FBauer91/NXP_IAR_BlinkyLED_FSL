@@ -1,0 +1,29 @@
+fsl_gpio.pbi: D:\Baueflde_Desktop\NXP_BlinkySDK\drivers\fsl_gpio.c \
+  D:\Baueflde_Desktop\NXP_BlinkySDK\drivers/fsl_gpio.h \
+  D:\Baueflde_Desktop\NXP_BlinkySDK\drivers/fsl_common.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\ EWARM\ FS\ 8.40.3\arm\inc\c\assert.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\ EWARM\ FS\ 8.40.3\arm\inc\c\ycheck.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\ EWARM\ FS\ 8.40.3\arm\inc\c\yvals.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\ EWARM\ FS\ 8.40.3\arm\inc\c\DLib_Defaults.h \
+  C:\\Program\ Files\ (x86)\\IAR\ Systems\\Embedded\ Workbench\ 8.3\ EWARM\ FS\ 8.40.3\\arm\\inc\\c\\DLib_Config_Normal.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\ EWARM\ FS\ 8.40.3\arm\inc\c\DLib_Product.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\ EWARM\ FS\ 8.40.3\arm\inc\c\stdbool.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\ EWARM\ FS\ 8.40.3\arm\inc\c\stdint.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\ EWARM\ FS\ 8.40.3\arm\inc\c\string.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\ EWARM\ FS\ 8.40.3\arm\inc\c\ysizet.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\ EWARM\ FS\ 8.40.3\arm\inc\c\DLib_Product_string.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\ EWARM\ FS\ 8.40.3\arm\inc\c\stdlib.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\ EWARM\ FS\ 8.40.3\arm\inc\c\DLib_Product_stdlib.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\ EWARM\ FS\ 8.40.3\arm\inc\c\stddef.h \
+  D:\Baueflde_Desktop\NXP_BlinkySDK\drivers/fsl_device_registers.h \
+  D:\Baueflde_Desktop\NXP_BlinkySDK\drivers/MIMXRT1062.h \
+  C:\Users\Baueflde\Desktop\NXP_BlinkySDK\drivers\CMSIS_inc\core_cm7.h \
+  C:\Users\Baueflde\Desktop\NXP_BlinkySDK\drivers\CMSIS_inc/cmsis_version.h \
+  C:\Users\Baueflde\Desktop\NXP_BlinkySDK\drivers\CMSIS_inc/cmsis_compiler.h \
+  C:\Users\Baueflde\Desktop\NXP_BlinkySDK\drivers\CMSIS_inc\cmsis_iccarm.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\ EWARM\ FS\ 8.40.3\arm\inc\c\iccarm_builtin.h \
+  C:\Users\Baueflde\Desktop\NXP_BlinkySDK\drivers\CMSIS_inc/mpu_armv7.h \
+  D:\Baueflde_Desktop\NXP_BlinkySDK\drivers/system_MIMXRT1062.h \
+  D:\Baueflde_Desktop\NXP_BlinkySDK\drivers/MIMXRT1062_features.h \
+  D:\Baueflde_Desktop\NXP_BlinkySDK\drivers/fsl_common_arm.h \
+  D:\Baueflde_Desktop\NXP_BlinkySDK\drivers/fsl_clock.h
